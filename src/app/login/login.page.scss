@@ -20,11 +20,11 @@
         letter-spacing: 1px;
     }
     &__form {
-        display: flex;
-        justify-content: space-between;
         width: 100%;
         margin-top: 60px;
         &--input {
+            width: 100%;
+            border: none;
             border-bottom: 1px solid black;
             font-weight: 500;
             color: #202020;
@@ -33,38 +33,24 @@
             display: flex;
             align-items: center;
             margin-bottom: 10px;
+            overflow: visible !important;
             &:focus {
-                border-color: darkgreen;
+                overflow: visible;
+                border-width: 1px;
+                border-color: #FE3C72;
+                outline: none;
             }
         }
-        #phone {
-            margin-left: 20px;
+        input {
+            &::placeholder {
+                font-weight: 400;   
+            }
         }
     }
-    &__warning {
+    &__forgot {
+        font-weight: 600;
         font-size: 11px;
-        color: #42424293;
-        font-weight: 500;
-    }
-    &__link {
-        font-size: 10px;
-        font-weight: 500;
-        margin-top: 0px;
-        margin-bottom: 20px;
-        u {
-            color: #202020;
-            font-weight: 500;
-        }
-    }
-    &__change {
-        font-size: 12px;
-        font-weight: 500;
-        margin-top: 15px;
-        margin-bottom: 30px;
-        u {
-            color: #FE3C72;
-            font-weight: 500;
-        }
+        color: #20202059;
     }
     &__button {
         width: 100%;
@@ -76,8 +62,22 @@
         font-size: 18px;
         font-weight: 600;
         letter-spacing: 1px; 
+        &:focus {
+            outline: none;
+        }
     }
-    p, span, u {
-        letter-spacing: 1px;
+    &__noButton {
+        width: 100%;
+        padding-top: 17px;
+        padding-bottom: 17px;
+        background-color: #79797918;
+        color: rgba(34, 33, 33, 0.233);
+        border-radius: 30px;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1px; 
+        &:focus {
+            outline: none;
+        }
     }
 }
