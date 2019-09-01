@@ -1,0 +1,15 @@
+<ion-content>
+  <div class="header">
+    <ion-icon name="arrow-back" class="header__icon"></ion-icon>
+  </div>
+  <div class="content">
+    <h2 class="content__title">Login by email</h2>
+    <div class="content__form">
+      <input #varInput type="email" class="content__form--input" placeholder="Your email is" [(ngModel)]="email" (ngModelChange)="changed()">
+      <input #varPass type="password" class="content__form--input" placeholder="Password" [(ngModel)]="password" (ngModelChange)="changed()">
+    </div>
+    <p class="content__forgot">Forgot your password?</p>
+    <button class="content__button" *ngIf="activateButton" (click)="goToSwipe()">LOGIN</button>
+    <button class="content__noButton" *ngIf="!activateButton">LOGIN</button>
+  </div>
+</ion-content>

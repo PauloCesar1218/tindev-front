@@ -1,6 +1,6 @@
 <ion-content>
   <div class="header">
-      <ion-icon class="header__icon" name="arrow-back"></ion-icon>
+      <ion-icon class="header__icon" name="arrow-back" (click)="goToHome()"></ion-icon>
   </div>
   <div class="content">
     <h2 class="content__title">My number is</h2>
@@ -25,7 +25,7 @@
       </span>
       <p class="content__link"><u>Learn what happens when your number changes.</u></p>
     </div>
-    <button class="content__button">CONTINUE</button>
+    <button class="content__button" (click)="goToLogin()">CONTINUE</button>
 
   </div>
 </ion-content>
