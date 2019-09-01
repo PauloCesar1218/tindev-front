@@ -1,0 +1,31 @@
+<ion-content>
+  <div class="header">
+      <ion-icon class="header__icon" name="arrow-back"></ion-icon>
+  </div>
+  <div class="content">
+    <h2 class="content__title">My number is</h2>
+
+    <form novalidate class="content__form">
+
+        <ion-select placeholder="Code" class="content__form--input">
+            <ion-select-option value="f">BR +55</ion-select-option>
+            <ion-select-option value="m">NW +47</ion-select-option>
+            <ion-select-option value="c">US +1</ion-select-option>
+        </ion-select>
+        <ion-input class="content__form--input" type="number"  id="phone" placeholder="Phone">
+        </ion-input>
+
+        
+    </form>
+    <div class="content__text">
+      <p class="content__change">Changed your phone number <span float-right><u>LOGIN BY EMAIL</u></span></p>
+      <span class="content__warning">
+        When you tap Continue. Tindev will not send a text with verification code. 
+        Message and data rates may apply. The verified phone number can be used to login.
+      </span>
+      <p class="content__link"><u>Learn what happens when your number changes.</u></p>
+    </div>
+    <button class="content__button">CONTINUE</button>
+
+  </div>
+</ion-content>

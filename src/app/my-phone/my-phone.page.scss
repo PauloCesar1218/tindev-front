@@ -1,0 +1,82 @@
+@import './../../styles/main.scss';
+
+.header {
+    &__icon {
+        font-size: 27px;
+        color: #FE3C72;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+}
+
+.content {
+    padding-left: 38px;
+    padding-right: 38px;
+    &__title {
+        font-size: 30px;
+        font-weight: 800;
+        color: #424242;
+        margin-top: 25px;
+        letter-spacing: 1px;
+    }
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 60px;
+        &--input {
+            border-bottom: 1px solid black;
+            font-weight: 500;
+            color: #202020;
+            letter-spacing: 1px; 
+            padding: 8px !important;
+            display: flex;
+            align-items: center;
+            &:focus {
+                border-color: darkgreen;
+            }
+        }
+        #phone {
+            margin-left: 20px;
+        }
+    }
+    &__warning {
+        font-size: 11px;
+        color: #42424293;
+        font-weight: 500;
+    }
+    &__link {
+        font-size: 10px;
+        font-weight: 500;
+        margin-top: 0px;
+        margin-bottom: 20px;
+        u {
+            color: #202020;
+            font-weight: 500;
+        }
+    }
+    &__change {
+        font-size: 12px;
+        font-weight: 500;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        u {
+            color: #FE3C72;
+            font-weight: 500;
+        }
+    }
+    &__button {
+        width: 100%;
+        padding-top: 17px;
+        padding-bottom: 17px;
+        background: linear-gradient(94deg, rgba(253,41,123,1) 0%, rgba(253,41,123,1) 22%, rgba(255,88,100,1) 65%, rgba(255,101,91,1) 100%);
+        color: white;
+        border-radius: 30px;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1px; 
+    }
+    p, span, u {
+        letter-spacing: 1px;
+    }
+}
