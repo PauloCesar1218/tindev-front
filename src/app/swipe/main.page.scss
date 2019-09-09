@@ -1,0 +1,18 @@
+@import './../../styles/main.scss';
+
+.tab {
+    height: 100vh;
+    &__bar {
+        height: 10vh;
+        border: none;
+        &--icon {
+            font-size: 35px;
+            color: #00000021;
+        }
+        ion-tab-button {
+            &:focus {
+                color: #FE3C72;
+            }
+        }
+    }
+}

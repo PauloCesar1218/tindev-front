@@ -24,5 +24,4 @@ export class MyPhonePage implements OnInit {
   goToLogin() {
     this.navCtrl.navigateForward('/login');
   }
-  
 }
