@@ -1,7 +1,7 @@
 .content {
     height: 100vh;
     .pic {
-        background-color: rgba(0, 0, 0, 0.025);
+        background-color: rgba(0, 0, 0, 0.020);
         padding: 5px 5px;
         height: 75vh;
         position: relative;
@@ -30,28 +30,38 @@
         }
     }
     .controllers {
-        background-color: rgba(0, 0, 0, 0.025);
+        background-color: rgba(0, 0, 0, 0.020);
         height: 15vh;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        ion-icon {
-            font-size: 30px;
-        }
-        [aria-label="close"] {
-            color: rgb(255, 2, 2);
-        }
-        [aria-label="star"] {
-            color: rgb(58, 108, 247);
-        }
-        [aria-label="heart"] {
-            color: rgb(0, 255, 136);
-        }
-        [aria-label="flash"] {
-            color: rgb(153, 0, 255);
-        }
-        [aria-label="refresh"] {
-            color: rgb(255, 238, 0);
+        &__btn {
+            border-radius: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            [aria-label="close"] {
+                color: rgb(255, 2, 2);
+                font-size: 30px;
+            }
+            [aria-label="star"] {
+                color: rgb(58, 108, 247);
+                font-size: 25px;
+            }
+            [aria-label="heart"] {
+                color: rgb(0, 255, 136);
+                font-size: 30px;
+            }
+            [aria-label="flash"] {
+                color: rgb(153, 0, 255);
+                font-size: 30px;
+            }
+            [aria-label="refresh"] {
+                color: rgb(255, 238, 0);
+                font-size: 30px;
+            }
         }
     }
 }

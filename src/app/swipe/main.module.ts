@@ -40,9 +40,6 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    MatchesPage,
-    SettingsPage,
-    SwipePage,
     RouterModule.forChild(routes)
   ],
   declarations: [MainPage, MatchesPage, SettingsPage, SwipePage]
