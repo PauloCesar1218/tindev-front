@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsPage implements OnInit {
 
+  private opts = {effect: 'slide', slidesPerView: 1};
   constructor() { }
 
   ngOnInit() {

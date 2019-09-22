@@ -26,7 +26,7 @@ export class LoginPage implements OnInit {
   }
 
   goToSwipe() {
-    this.navCtrl.navigateForward('/swipe');
+    this.navCtrl.navigateForward('/main');
   }
 
 }

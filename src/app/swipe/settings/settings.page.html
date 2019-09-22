@@ -1,44 +1,54 @@
 <ion-content>
-  <div class="myProfile">
-    <ion-icon class="myProfile__pic" name="md-contact"></ion-icon>
-    <h2 class="myProfile__name">Paulo, 18</h2>
-    <span class="myProfile__work">Web Developer at Accenture</span>
-    <span class="myProfile__school">UMC - Sistemas de Informação</span>
+  <div class="sec">
+    <div class="myProfile">
+      <ion-icon class="myProfile__pic" name="md-contact"></ion-icon>
+      <h2 class="myProfile__name">Paulo, 18</h2>
+      <span class="myProfile__work">Web Developer at Accenture</span>
+      <span class="myProfile__school">UMC - Sistemas de Informação</span>
+    </div>
+    <div class="options">
+      <div class="options__opt">
+        <span class="options__opt--btn">
+            <ion-icon class="options__opt--icon" name="settings"></ion-icon>
+        </span>
+        <span class="options__opt--name">SETTINGS</span>
+      </div>
+      <div class="options__opt" id="camera">
+        <span class="options__opt--btn" id="camera__btn">
+            <ion-icon class="options__opt--icon" name="camera"></ion-icon>
+        </span>
+        <span class="options__opt--btn" id="add">
+            <ion-icon name="md-add" id="add__icon"></ion-icon>
+        </span>
+        <span class="options__opt--name">ADD MEDIA</span>
+      </div>
+      <div class="options__opt">
+        <span class="options__opt--btn">
+            <ion-icon class="options__opt--icon" name="md-create"></ion-icon>
+        </span>
+        <span class="options__opt--name">EDIT INFO</span>
+      </div>
+    </div>
+    <ion-slides class="slider" pager="true" [options]="opts">
+      <ion-slide class="slider__slide">
+        <span class="slider__slide--title"><ion-icon name="md-star"></ion-icon> Stand Out With Super Likes</span>
+        <span class="slider__slide--desc">You're 3x more likely to get a match!</span>
+      </ion-slide>
+      <ion-slide class="slider__slide">
+        <span class="slider__slide--title"><ion-icon name="md-star"></ion-icon> Stand Out With Super Likes</span>
+        <span class="slider__slide--desc">You're 3x more likely to get a match!</span>
+      </ion-slide>
+      <ion-slide class="slider__slide">
+        <span class="slider__slide--title"><ion-icon name="md-star"></ion-icon> Stand Out With Super Likes</span>
+        <span class="slider__slide--desc">You're 3x more likely to get a match!</span>
+      </ion-slide>
+      <ion-slide class="slider__slide">
+        <span class="slider__slide--title"><ion-icon name="md-star"></ion-icon> Stand Out With Super Likes</span>
+        <span class="slider__slide--desc">You're 3x more likely to get a match!</span>
+      </ion-slide>
+    </ion-slides>
+    <div class="upgrade">
+      <button class="upgrade__button">MY TINDER PLUS</button>
+    </div>
   </div>
-  <div class="options">
-    <div class="options__opt">
-      <ion-icon class="options__opt--icon" name="settings"></ion-icon>
-      <span class="options__opt--btn"></span>
-      <span class="options__opt--name">SETTINGS</span>
-    </div>
-    <div class="options__opt">
-      <ion-icon class="options__opt--icon" name="camera"></ion-icon>
-      <span class="options__opt--btn"></span>
-      <span class="options__opt--name">ADD MEDIA</span>
-    </div>
-    <div class="options__opt">
-      <ion-icon class="options__opt--icon" name="create"></ion-icon>
-      <span class="options__opt--btn"></span>
-      <span class="options__opt--name">EDIT INFO</span>
-    </div>
-  </div>
-  <ion-slides class="slider">
-    <ion-slide class="slider__slide">
-      <span><ion-icon name="md-star"></ion-icon> Stand Out With Super Likes</span>
-      <span>You're 3x more likely to get a match!</span>
-    </ion-slide>
-    <ion-slide class="slider__slide">
-      <span><ion-icon name="md-star"></ion-icon> Stand Out With Super Likes</span>
-      <span>You're 3x more likely to get a match!</span>
-    </ion-slide>
-    <ion-slide class="slider__slide">
-      <span><ion-icon name="md-star"></ion-icon> Stand Out With Super Likes</span>
-      <span>You're 3x more likely to get a match!</span>
-    </ion-slide>
-    <ion-slide class="slider__slide">
-      <span><ion-icon name="md-star"></ion-icon> Stand Out With Super Likes</span>
-      <span>You're 3x more likely to get a match!</span>
-    </ion-slide>
-  </ion-slides>
-  <button class="button">GET TINDER PLUS</button>
 </ion-content>
