@@ -1,7 +1,7 @@
-<div class="pic">
-    <img src="https://avatars2.githubusercontent.com/u/45977530?v=4" alt="">
+<div class="pic" *ngFor="let dev of devs">
+    <img [src]="dev?.image_url" alt="">
     <div class="pic__info">
-      <h2 class="pic__info--name">João Carmargo, 19</h2>
+      <h2 class="pic__info--name">{{ dev?.name }}, {{ dev.age }}</h2>
       <p>14 miles away</p>
       <ion-icon class="pic__info--icon" name="information-circle"></ion-icon>
     </div>

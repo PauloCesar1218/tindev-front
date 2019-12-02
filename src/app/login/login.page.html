@@ -9,7 +9,7 @@
       <input #varPass type="password" class="content__form--input" placeholder="Password" [(ngModel)]="password" (ngModelChange)="changed()">
     </div>
     <p class="content__forgot">Forgot your password?</p>
-    <button class="content__button" *ngIf="activateButton" (click)="goToSwipe()">LOGIN</button>
+    <button class="content__button" *ngIf="activateButton" (click)="login()">LOGIN</button>
     <button class="content__noButton" *ngIf="!activateButton">LOGIN</button>
   </div>
 </ion-content>

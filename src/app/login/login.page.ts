@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-
+import { LoginServiceService } from '../services/login-service.service';
+import { Storage } from '@ionic/storage';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -11,7 +12,7 @@ export class LoginPage implements OnInit {
   email;
   password;
   activateButton: boolean;
-  constructor(private navCtrl: NavController) { }
+  constructor(private navCtrl: NavController, private service: LoginServiceService, private storage: Storage) { }
 
   ngOnInit() {
     this.activateButton = false;
@@ -26,7 +27,20 @@ export class LoginPage implements OnInit {
   }
 
   goToSwipe() {
-    this.navCtrl.navigateForward('/main');
+    this.navCtrl.navigateForward('/main-v2');
+  }
+
+  login() {
+    const user = {
+      email: this.email,
+      password: this.password
+    };
+    this.service.login(user).subscribe(data => {
+      this.storage.set('loginData', JSON.stringify(data));
+      this.goToSwipe();
+    }, err => {
+      console.error(err);
+    });
   }
 
 }

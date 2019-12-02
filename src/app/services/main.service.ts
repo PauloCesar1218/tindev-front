@@ -7,14 +7,18 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class LoginServiceService {
+export class MainService {
   customHeader = new HttpHeaders({
     'Api-Key': 'supersecrectkey'
   });
   constructor(private http: HttpClient) { }
 
-  login(user): Observable<any> {
-    return this.http.post(`${SERVER_URL}${environment.API.login}`, user, { headers: this.customHeader });
+  getDevelopers(): Observable<any> {
+    return this.http.get(`${SERVER_URL}${environment.API.main.get_developers}`, { headers: this.customHeader });
+  }
+
+  getConversations(dev): Observable<any> {
+    return this.http.post(`${SERVER_URL}${environment.API.main.get_matches}`, dev, { headers: this.customHeader });
   }
   
 }
