@@ -1,0 +1,72 @@
+    .pic {
+        background-color: rgba(0, 0, 0, 0.020);
+        padding: 5px 10px;
+        height: 75vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+        &__info {
+            position: absolute;
+            bottom: 10px;
+            color: white;
+            width: 90%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            &--icon {
+                top: 0px;
+                position: absolute;
+                right: 0;
+                font-size: 28px;
+            }
+            &--name {
+                margin: 0px;
+            }
+        }
+    }
+    .controllers {
+        background-color: rgba(0, 0, 0, 0.020);
+        height: 15vh;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        &__btn {
+            border-radius: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            box-shadow: 0px 5px 5px 5px #00000013;
+            [aria-label="close"] {
+                color: rgb(255, 2, 2);
+                font-size: 35px;
+            }
+            [aria-label="star"] {
+                color: rgb(58, 108, 247);
+                font-size: 25px;
+            }
+            [aria-label="heart"] {
+                color: rgb(0, 255, 136);
+                font-size: 35px;
+            }
+            [aria-label="flash"] {
+                color: rgb(153, 0, 255);
+                font-size: 25px;
+            }
+            [aria-label="refresh"] {
+                color: rgb(255, 238, 0);
+                font-size: 25px;
+            }
+        }
+    }
+

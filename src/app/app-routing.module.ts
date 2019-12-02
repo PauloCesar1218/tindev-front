@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'my-phone', loadChildren: () => import('./my-phone/my-phone.module').then( h => h.MyPhonePageModule)},
   { path: 'login', loadChildren: () => import('./login/login.module').then( l => l.LoginPageModule)},
   { path: 'main', loadChildren: () => import('./swipe/main.module').then( m => m.MainPageModule)},
+  { path: 'main-v2', loadChildren: () => import('./main-v2/main-v2.module').then( m => m.MainV2PageModule)},
 ];
 
 @NgModule({

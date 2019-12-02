@@ -1,0 +1,18 @@
+<ion-content class="content">
+  <div class="header">
+      <ion-icon class="tab__bar--icon" name="md-contact"></ion-icon>
+      <ion-icon class="tab__bar--icon" name="md-flame"></ion-icon>  
+      <ion-icon class="tab__bar--icon" name="ios-chatbubbles"></ion-icon>
+  </div>
+  <ion-slides class="slider" [options]="opts">
+    <ion-slide class="slider__slides">
+        <app-settings></app-settings>
+    </ion-slide>
+    <ion-slide class="slider__slides">
+        <app-swipe></app-swipe>   
+    </ion-slide>
+    <ion-slide class="slider__slides">
+        <app-matches></app-matches>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

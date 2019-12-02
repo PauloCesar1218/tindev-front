@@ -1,3 +1,40 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.tab {
+    height: 100vh;
+    &__bar {
+        height: 10vh;
+        border: none;
+        &--icon {
+            font-size: 35px;
+            color: #00000021;
+        }
+        ion-tab-button {
+            &:focus {
+                color: #FE3C72;
+            }
+        }
+    }
+}
+
+.slider {
+    height: 90vh;
+    &__slides {
+        height: 100%;
+        display: block;
+        justify-content: flex-start;
+        align-items: flex-start;
+        overflow: scroll;
+        
+    }
+}
+
 ion-content {
     height: 100vh;
     span {
@@ -69,7 +106,7 @@ ion-content {
             }
         }
     }
-    .slider {
+    .paidVersion {
         width: 100%;
         height: 20vh;
         &__slide {
@@ -77,6 +114,7 @@ ion-content {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            width: 100% !important;
             &--title {
                 font-weight: 600;
                 margin-bottom: 5px; 
