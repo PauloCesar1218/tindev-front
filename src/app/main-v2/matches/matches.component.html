@@ -6,128 +6,32 @@
   <div class="matches__container">
     <div class="matches__search">
       <ion-icon class="matches__search__icon" name="search"></ion-icon>
-      <input class="matches__search__input" type="text" placeholder="Search 12 matches">
+      <input class="matches__search__input" type="text" [placeholder]="conversations?.qttMatches">
     </div>
     <div class="matches__new">
       <span class="matches__new--title">New Matches</span>
       <ion-slides class="matches__new--slides" [options]="opts">
-        <ion-slide class="matches__new--slides--slide">
-          <img class="matches__new--slides--slide--img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl2jYm3WkhrETSSXffqqjg7FtocPY8lKXUHiD4gkpGwtMhuzgo&s" alt="">
+        <ion-slide class="matches__new--slides--slide" *ngFor="let match of conversations?.matches">
+          <img class="matches__new--slides--slide--img" [src]="match.image_url" alt="">
         </ion-slide>
-        <ion-slide class="matches__new--slides--slide">
-          <img class="matches__new--slides--slide--img"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl2jYm3WkhrETSSXffqqjg7FtocPY8lKXUHiD4gkpGwtMhuzgo&s" alt="">
+        <ion-slide [ngStyle]="{'height': '75px', 'width': '75px'}" class="matches__new--slides--slide">
         </ion-slide>
-        <ion-slide class="matches__new--slides--slide">
-          <img class="matches__new--slides--slide--img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl2jYm3WkhrETSSXffqqjg7FtocPY8lKXUHiD4gkpGwtMhuzgo&s" alt="">
+        <ion-slide [ngStyle]="{'height': '75px', 'width': '75px'}" class="matches__new--slides--slide">
         </ion-slide>
-        <ion-slide class="matches__new--slides--slide">
-          <img class="matches__new--slides--slide--img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl2jYm3WkhrETSSXffqqjg7FtocPY8lKXUHiD4gkpGwtMhuzgo&s" alt="">
-        </ion-slide>
-        <ion-slide class="matches__new--slides--slide">
-          <img class="matches__new--slides--slide--img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl2jYm3WkhrETSSXffqqjg7FtocPY8lKXUHiD4gkpGwtMhuzgo&s" alt="">
-        </ion-slide>
-        <ion-slide class="matches__new--slides--slide">
-          <img class="matches__new--slides--slide--img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl2jYm3WkhrETSSXffqqjg7FtocPY8lKXUHiD4gkpGwtMhuzgo&s" alt="">
-        </ion-slide>
-        <ion-slide [ngStyle]="{'height': '75px', 'width': '50px'}" class="matches__new--slides--slide">
-        </ion-slide>
-        <ion-slide [ngStyle]="{'height': '75px', 'width': '50px'}" class="matches__new--slides--slide">
-        </ion-slide>
-        <ion-slide [ngStyle]="{'height': '75px', 'width': '50px'}" class="matches__new--slides--slide">
+        <ion-slide [ngStyle]="{'height': '75px', 'width': '75px'}" class="matches__new--slides--slide">
         </ion-slide>
       </ion-slides>
     </div>
     <div class="matches__messages">
       <span class="matches__messages--title">Messages</span>
       <div class="matches__messages--conversations">
-        <div class="matches__messages--conversations--unity">
+        <div class="matches__messages--conversations--unity" *ngFor="let conversation of conversations?.conversations">
           <div class="matches__messages--conversations--unity--img">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl2jYm3WkhrETSSXffqqjg7FtocPY8lKXUHiD4gkpGwtMhuzgo&s" alt="">  
+            <img [src]="conversation?.image_url" alt="">  
           </div>
           <div class="matches__messages--conversations--unity--content">
-            <span class="matches__messages--conversations--unity--content--name">Stephanie Azevedo</span>
-            <p class="matches__messages--conversations--unity--content--msg">Lorem ipsum dolor sit amet</p>
-          </div>
-        </div>
-        <div class="matches__messages--conversations--unity">
-          <div class="matches__messages--conversations--unity--img">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl2jYm3WkhrETSSXffqqjg7FtocPY8lKXUHiD4gkpGwtMhuzgo&s" alt="">  
-          </div>
-          <div class="matches__messages--conversations--unity--content">
-            <span class="matches__messages--conversations--unity--content--name">Stephanie Azevedo</span>
-            <p class="matches__messages--conversations--unity--content--msg">Lorem ipsum dolor sit amet</p>
-          </div>
-        </div>
-        <div class="matches__messages--conversations--unity">
-          <div class="matches__messages--conversations--unity--img">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl2jYm3WkhrETSSXffqqjg7FtocPY8lKXUHiD4gkpGwtMhuzgo&s" alt="">  
-          </div>
-          <div class="matches__messages--conversations--unity--content">
-            <span class="matches__messages--conversations--unity--content--name">Stephanie Azevedo</span>
-            <p class="matches__messages--conversations--unity--content--msg">Lorem ipsum dolor sit amet</p>
-          </div>
-        </div>
-        <div class="matches__messages--conversations--unity">
-          <div class="matches__messages--conversations--unity--img">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl2jYm3WkhrETSSXffqqjg7FtocPY8lKXUHiD4gkpGwtMhuzgo&s" alt="">  
-          </div>
-          <div class="matches__messages--conversations--unity--content">
-            <span class="matches__messages--conversations--unity--content--name">Stephanie Azevedo</span>
-            <p class="matches__messages--conversations--unity--content--msg">Lorem ipsum dolor sit amet</p>
-          </div>
-        </div>
-        <div class="matches__messages--conversations--unity">
-          <div class="matches__messages--conversations--unity--img">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl2jYm3WkhrETSSXffqqjg7FtocPY8lKXUHiD4gkpGwtMhuzgo&s" alt="">  
-          </div>
-          <div class="matches__messages--conversations--unity--content">
-            <span class="matches__messages--conversations--unity--content--name">Stephanie Azevedo</span>
-            <p class="matches__messages--conversations--unity--content--msg">Lorem ipsum dolor sit amet</p>
-          </div>
-        </div>
-        <div class="matches__messages--conversations--unity">
-          <div class="matches__messages--conversations--unity--img">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl2jYm3WkhrETSSXffqqjg7FtocPY8lKXUHiD4gkpGwtMhuzgo&s" alt="">  
-          </div>
-          <div class="matches__messages--conversations--unity--content">
-            <span class="matches__messages--conversations--unity--content--name">Stephanie Azevedo</span>
-            <p class="matches__messages--conversations--unity--content--msg">Lorem ipsum dolor sit amet</p>
-          </div>
-        </div>
-        <div class="matches__messages--conversations--unity">
-          <div class="matches__messages--conversations--unity--img">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl2jYm3WkhrETSSXffqqjg7FtocPY8lKXUHiD4gkpGwtMhuzgo&s" alt="">  
-          </div>
-          <div class="matches__messages--conversations--unity--content">
-            <span class="matches__messages--conversations--unity--content--name">Stephanie Azevedo</span>
-            <p class="matches__messages--conversations--unity--content--msg">Lorem ipsum dolor sit amet</p>
-          </div>
-        </div>
-        <div class="matches__messages--conversations--unity">
-          <div class="matches__messages--conversations--unity--img">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl2jYm3WkhrETSSXffqqjg7FtocPY8lKXUHiD4gkpGwtMhuzgo&s" alt="">  
-          </div>
-          <div class="matches__messages--conversations--unity--content">
-            <span class="matches__messages--conversations--unity--content--name">Stephanie Azevedo</span>
-            <p class="matches__messages--conversations--unity--content--msg">Lorem ipsum dolor sit amet</p>
-          </div>
-        </div>
-        <div class="matches__messages--conversations--unity">
-          <div class="matches__messages--conversations--unity--img">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl2jYm3WkhrETSSXffqqjg7FtocPY8lKXUHiD4gkpGwtMhuzgo&s" alt="">  
-          </div>
-          <div class="matches__messages--conversations--unity--content">
-            <span class="matches__messages--conversations--unity--content--name">Stephanie Azevedo</span>
-            <p class="matches__messages--conversations--unity--content--msg">Lorem ipsum dolor sit amet</p>
-          </div>
-        </div>
-        <div class="matches__messages--conversations--unity">
-          <div class="matches__messages--conversations--unity--img">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl2jYm3WkhrETSSXffqqjg7FtocPY8lKXUHiD4gkpGwtMhuzgo&s" alt="">  
-          </div>
-          <div class="matches__messages--conversations--unity--content">
-            <span class="matches__messages--conversations--unity--content--name">Stephanie Azevedo</span>
-            <p class="matches__messages--conversations--unity--content--msg">Lorem ipsum dolor sit amet</p>
+            <span class="matches__messages--conversations--unity--content--name">{{ conversation?.name }}</span>
+            <p class="matches__messages--conversations--unity--content--msg">{{ conversation?.content }}</p>
           </div>
         </div>
       </div>

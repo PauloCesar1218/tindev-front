@@ -13,12 +13,20 @@ export class MainService {
   });
   constructor(private http: HttpClient) { }
 
-  getDevelopers(): Observable<any> {
-    return this.http.get(`${SERVER_URL}${environment.API.main.get_developers}`, { headers: this.customHeader });
+  getDevelopers(id): Observable<any> {
+    return this.http.get(`${SERVER_URL}${environment.API.main.get_developers}/${id}`, { headers: this.customHeader });
   }
 
   getConversations(dev): Observable<any> {
     return this.http.post(`${SERVER_URL}${environment.API.main.get_matches}`, dev, { headers: this.customHeader });
+  }
+
+  likeDeveloper(dev): Observable<any> {
+    return this.http.post(`${SERVER_URL}${environment.API.main.like}`, dev, { headers: this.customHeader });
+  }
+
+  findMatches(dev): Observable<any> {
+    return this.http.post(`${SERVER_URL}${environment.API.main.match}`, dev, { headers: this.customHeader });
   }
   
 }

@@ -7,7 +7,9 @@ export const environment = {
     login: '/user/login',
     main: {
       get_developers: '/developers',
-      get_matches: '/developers/conversations'
+      get_matches: '/developers/conversations',
+      like: '/user/like',
+      match: '/user/match'
     }
   },
   production: false,

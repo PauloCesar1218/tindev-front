@@ -1,25 +1,27 @@
-<div class="pic" *ngFor="let dev of devs">
+<div class="container">
+  <div class="pic" *ngFor="let dev of devs, let i = index" [ngStyle]="{'z-index': i+1}" #devk>
     <img [src]="dev?.image_url" alt="">
     <div class="pic__info">
       <h2 class="pic__info--name">{{ dev?.name }}, {{ dev.age }}</h2>
       <p>14 miles away</p>
       <ion-icon class="pic__info--icon" name="information-circle"></ion-icon>
     </div>
+    <div class="controllers">
+      <span class="controllers__btn">
+        <ion-icon name="md-refresh"></ion-icon>
+      </span>
+      <span class="controllers__btn" (click)="deslike()">  
+        <ion-icon name="md-close"></ion-icon>
+      </span>
+      <span class="controllers__btn">
+        <ion-icon class="my-icon" name="md-star"></ion-icon>
+      </span>
+      <span class="controllers__btn" (click)="like(dev)">
+        <ion-icon name="md-heart"></ion-icon>
+      </span>
+      <span class="controllers__btn">
+        <ion-icon name="ios-flash"></ion-icon>
+      </span>
+    </div>
   </div>
-  <div class="controllers">
-    <span class="controllers__btn">
-      <ion-icon name="md-refresh"></ion-icon>
-    </span>
-    <span class="controllers__btn">  
-      <ion-icon name="md-close"></ion-icon>
-    </span>
-    <span class="controllers__btn">
-      <ion-icon class="my-icon" name="md-star"></ion-icon>
-    </span>
-    <span class="controllers__btn">
-      <ion-icon name="md-heart"></ion-icon>
-    </span>
-    <span class="controllers__btn">
-      <ion-icon name="ios-flash"></ion-icon>
-    </span>
-  </div>
+</div>
